@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mCompartilhar"
+        android:icon="@drawable/ic_share_dp"
+        android:title="Compartilhar"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mCadastrar"
+        android:icon="@drawable/ic_person_add_dp"
+        android:title="Cadastrar"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mSobre"
+        android:icon="@drawable/ic_info_dp"
+        android:title="Sobre"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/mMensagens"
+        android:icon="@drawable/ic_message_dp"
+        android:title="Mensagem"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/mAvisos"
+        android:icon="@drawable/ic_notifications_dp"
+        android:title="Avisos"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/mAjuda"
+        android:icon="@drawable/ic_live_help_dp"
+        android:title="Ajuda"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mSuporte"
+        android:icon="@drawable/ic_contact_phone_dp"
+        android:title="Suporte"
+        app:showAsAction="never" />
+
+</menu>
