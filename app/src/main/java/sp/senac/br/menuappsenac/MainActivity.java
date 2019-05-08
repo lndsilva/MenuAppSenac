@@ -17,6 +17,21 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolBarMenuApp);
         setSupportActionBar(toolbar);
+        //items de menu
+        getSupportActionBar().setTitle("Músicas");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_person_add_dp);
+
+        toolbar.setNavigationIcon(R.drawable.ic_music_dp);
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(MainActivity.this,
+                NovaJanela_Activity.class));
+        finish();
+        return;
     }
 
     @Override
@@ -32,17 +47,17 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.mCompartilhar:
-                Intent intent = new Intent(MainActivity.this,NovaJanela_Activity.class);
+                Intent intent = new Intent(MainActivity.this, NovaJanela_Activity.class);
                 startActivity(intent);
                 Toast.makeText(getApplicationContext(), "Compartilhar", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.mCadastrar:
-                Intent intentCadastrar = new Intent(MainActivity.this,OutraJanela_Activity.class);
+                Intent intentCadastrar = new Intent(MainActivity.this, OutraJanela_Activity.class);
                 startActivity(intentCadastrar);
                 Toast.makeText(getApplicationContext(), "Cadastrar", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.mSobre:
-                Intent intentSobre = new Intent(MainActivity.this,TerceiraJanelaActivity.class);
+                Intent intentSobre = new Intent(MainActivity.this, TerceiraJanelaActivity.class);
                 startActivity(intentSobre);
                 Toast.makeText(getApplicationContext(), "Sobre", Toast.LENGTH_SHORT).show();
                 break;
@@ -57,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.mSuporte:
                 Toast.makeText(getApplicationContext(), "Suporte'", Toast.LENGTH_SHORT).show();
+                break;
+            case android.R.id.home:
+                startActivity(new Intent(MainActivity.this, NovaJanela_Activity.class));
+                finish();
                 break;
         }
 

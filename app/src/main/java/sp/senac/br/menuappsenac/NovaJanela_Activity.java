@@ -2,6 +2,7 @@ package sp.senac.br.menuappsenac;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuInflater;
 
 public class NovaJanela_Activity extends AppCompatActivity {
 
@@ -10,4 +11,6 @@ public class NovaJanela_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nova_janela_layout);
     }
+
+
 }
